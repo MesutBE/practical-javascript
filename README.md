@@ -39,4 +39,12 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
   1. todoList.addTodo should objects.
   1. todoList.changeTodo should change the todoText property.
   1. todoList.toggleCompleted should change the completed property.
+
+### Version 5 - Loops of Logic
+
+#### Requirements 
+
+  1. displayTodos should show .todoText.
+  1. displayTodos should tell if .todos is empty.
+  1. displayTodos should show completed.
   
