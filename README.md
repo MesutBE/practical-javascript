@@ -31,3 +31,12 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
   1. it should have an addTodo method. 
   1. it should have a changeTodo method.
   1. It should have a deleteTodo method.
+
+### Version 4 - Booleans
+
+#### Requirements 
+
+  1. todoList.addTodo should objects.
+  1. todoList.changeTodo should change the todoText property.
+  1. todoList.toggleCompleted should change the completed property.
+  
