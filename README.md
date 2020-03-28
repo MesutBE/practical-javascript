@@ -48,3 +48,10 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
   1. displayTodos should tell if .todos is empty.
   1. displayTodos should show completed.
   
+### Version 6 - Thinking in Code 
+
+#### Requirements 
+
+  1. .toggleAll: If everything's true, make everything false.
+  1. .toggleAll: Otherwise, make everything true.
+  
