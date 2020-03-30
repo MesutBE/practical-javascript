@@ -1,7 +1,5 @@
 # Project Practical Javascript
 
-# Project Biggest and Smallest
-
 ## Table of contents
 
 - [General info](#general-info)
