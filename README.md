@@ -89,3 +89,10 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
 1. Each li should have an id that has the todo position 
 1. Delete buttons should have access to the todo id 
 1. Clicking delete should update todoList.todos and the DOM 
+
+### Version 11 - Destroy all for loops 
+
+#### Requirements
+
+1. todoList.toggleAll should use forEach  
+1. view.displayTodos should use forEach 
