@@ -4,6 +4,7 @@ var todoList = {
     todos: [],
     // it should have a function to display todos.
     displayTodos: function () { // now it (and the others) is a method
+        // debugger;
         if (this.todos.length === 0) {return console.log('It is empty!');}
 
         console.log('My todos:');
@@ -64,17 +65,47 @@ var todoList = {
     }
 };
 
+var handlers = {
+    displayTodos: function () {
+        todoList.displayTodos();
+    },
+    addTodo: function () {
+        var addTodoTextInput = document.getElementById("addTodoTextInput");
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = "";
+    },
+    changeTodo: function () {
+        var changeTodoPositionInput = document.getElementById(
+            "changeTodoPositionInput"
+        );
+        var changeTodoTextInput = document.getElementById("changeTodoTextInput");
+        todoList.changeTodo(
+            changeTodoPositionInput.valueAsNumber,
+            changeTodoTextInput.value
+        );
+        changeTodoTextInput.value = "";
+        changeTodoPositionInput.value = "";
+    },
+    deleteTodos: function () {
+        var deleteTodoPositionInput = document.getElementById(
+            "deleteTodoPositionInput"
+        );
+        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+        deleteTodoPositionInput.value = "";
+    },
+    toggleCompleted: function () {
+        var toggleCompletedPositionInput = document.getElementById(
+            "toggleCompletedPositionInput"
+        );
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+        toggleCompletedPositionInput.value = "";
+    },
+    toggleAll: function () {
+        todoList.toggleAll();
+    }
+};
 
-var displayTodosButton = document.getElementById("displayTodosButton");
-var toggleAllButton = document.getElementById("toggleAllButton");
 
-displayTodosButton.addEventListener("click", function () {
-    todoList.displayTodos();
-});
-
-toggleAllButton.addEventListener("click", function () {
-    todoList.toggleAll();
-});
 
 todoList.addTodo('item 1');
 todoList.addTodo('item 2');
