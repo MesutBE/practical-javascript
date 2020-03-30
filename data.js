@@ -66,12 +66,8 @@ var handlers = {
         changeTodoPositionInput.value = "";
         view.displayTodos();
     },
-    deleteTodos: function () {
-        var deleteTodoPositionInput = document.getElementById(
-            "deleteTodoPositionInput"
-        );
-        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
-        deleteTodoPositionInput.value = "";
+    deleteTodos: function (position) {
+        todoList.deleteTodo(position);
         view.displayTodos();
     },
     toggleCompleted: function () {
@@ -104,12 +100,32 @@ var view = {
                 todoTextWithCompletion = "( ) " + todo.todoText;
             }
 
+            todoLi.id = i;
             todoLi.textContent = todoTextWithCompletion;
+            todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
         }
 
+    },
+    createDeleteButton: function () {
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className = "deleteButton";
+        return deleteButton;
+    },
+    setUpEventListeners: function () {
+        let todoUl = document.querySelector("ul");
+        todoUl.addEventListener("click", function (event) {
+            let elementClicked = event.target;
+
+            if (elementClicked.className === "deleteButton") {
+                handlers.deleteTodos(parseInt(elementClicked.parentNode.id));
+            }
+        });
     }
 };
+
+view.setUpEventListeners();
 
 todoList.addTodo('item 1');
 todoList.addTodo('item 2');
