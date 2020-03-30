@@ -71,3 +71,11 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
 1. There should be a button for changing todos
 1. There should be a button for deleting todos 
 1. There should be a button for toggling a todo 
+
+### Version 9 - Escape from the console 
+
+#### Requirements
+
+1. There should be an li element for every todo 
+1. Each li element should contain .todoText 
+1. Each li element should show .completed 
