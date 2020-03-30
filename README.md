@@ -79,3 +79,13 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
 1. There should be an li element for every todo 
 1. Each li element should contain .todoText 
 1. Each li element should show .completed 
+
+### Version 10 - Click to delete 
+
+#### Requirements
+
+1. There should be a way to create delete buttons 
+1. There should be a delete button for each todo 
+1. Each li should have an id that has the todo position 
+1. Delete buttons should have access to the todo id 
+1. Clicking delete should update todoList.todos and the DOM 
