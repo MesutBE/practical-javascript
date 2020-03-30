@@ -62,3 +62,12 @@ If you want to see how it is growing see [branches](https://github.com/MesutBE/p
 1. There should be a “Display todos” button and a “Toggle all” button in the app
 1. Clicking “Display todos” should run todoList.displayTodos
 1. Clicking “Toggle all” should run todoList.toggleAll
+
+### Version 8 - Getting data from inputs
+
+#### Requirements
+
+1. There should be a button for adding todos 
+1. There should be a button for changing todos
+1. There should be a button for deleting todos 
+1. There should be a button for toggling a todo 
